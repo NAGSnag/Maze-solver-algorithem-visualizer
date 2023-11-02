@@ -186,11 +186,13 @@ def main():
                 map[col][row].changevalue('b')
 
             else:
-                if map[col][row].getcolor()=='bl':
-                    continue
-                if map[col][row].getcolor()=='or':
-                     continue
-                map[col][row].changevalue(1)
+                try:
+                    if map[col][row].getcolor()=='bl':
+                        continue
+                    if map[col][row].getcolor()=='or':
+                        continue
+                    map[col][row].changevalue(1)
+                except Exception:pass
 
         if right:
             pos = pygame.mouse.get_pos()
