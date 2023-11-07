@@ -147,57 +147,7 @@ def ypath():
                     ppathl.append((i,j-2))
                     ppathl.append((i,j-1))
 
-
-
-
-
     return ypathl
-
-
-
-    # print('ypath')
-    # path=shortpath[:]
-    # counter=1
-    # for item in path:
-    #     if map[item[0]+1][item[1]].getcolor()==4:
-    #         print(map[item[0]][item[1]+2],item)
-    #     if map[item[0]][item[1]+1].getcolor() == 4:
-    #         print(map[item[0]][item[1]], map[item[0]][item[1] + 2])
-    #         # a=path.index(item)
-    #         # b=path.index((item[0]+2,item[1]))
-    #         # if a-b>0:counter=-1
-    #         # for i in range(path.index(item),b,counter):
-    #         #     path.pop(i)
-    #         # path.append(item)
-    #         # path.append((item[0]+2,item[1]))
-    #         # path.append((item[0]+1,item[1]))
-    #
-    # return path
-    #
-    #
-    #
-    #
-
-    # for i in range(3,78):
-    #     for j in range(3,78):
-    #         try:
-    #             if map[i][j].getvalue() == 3:
-    #                 if map[i][j + 2].getvalue() == 3:
-    #                     if map[i][j + 1].getvalue() == 4:
-    #                         a = path.index((i, j))
-    #                         b = path.index((i, j + 2))
-    #                         if b-a>0:
-    #                             counter=1
-    #                         else:counter=-1
-    #                         for i in range(a, b,counter):
-    #                             path.pop(i)
-    #                         path.append((i, j))
-    #                         path.append((i, j + 1))
-    #                         path.append((i, j + 2))
-    #         except Exception as e:
-    #             print(e)
-    # return path
-
 
 def gen(item):
     mcur =item
@@ -236,12 +186,6 @@ def gen(item):
 
     except Exception as e:
         print(e)
-
-
-
-
-
-
 
 
 def short(shortpath):
@@ -303,10 +247,6 @@ def short(shortpath):
             print('not done')
             pass
     return short
-
-
-
-
 
 
 #########################################################################################################################
@@ -372,8 +312,6 @@ def main():
 
 
 
-
-
         if keypressed[pygame.K_m]:
             mx, my = 1, 1
             #mpath.append((mx, my))
@@ -392,80 +330,7 @@ def main():
             mflag=False
 
 
-            # rand = random.choice([0, -1,])
-            # mcur = mpath.pop()
-            # mway=[]
-            #
-            # mpways = [(mcur[0], mcur[1] + 1), (mcur[0], mcur[1] - 1), (mcur[0] + 1, mcur[1]), (mcur[0] - 1, mcur[1])]
-            # random.shuffle(mpways)
-            # cnt=0
-            #
-            # # while mpath:
-            # #     mcur = mpath.pop()
-            # #     mpways = [(mcur[0], mcur[1] + 1), (mcur[0], mcur[1] - 1), (mcur[0] + 1, mcur[1]),(mcur[0] - 1, mcur[1])]
-            # #     random.shuffle(mpways)
-            # #     for item in mpways:
-            # #         if item[0] <= 78 and item[0] >= 3 and item[1] <= 78 and item[1] >= 3:
-            # #             if map[item[0]][item[1]].getvalue() == 1:
-            # #                 map[item[0]][item[1]].changevalue(0)
-            # #                 map[mcur[0] + item[0] // 2][mcur[1] + item[1] // 2].changevalue(0)
-            # #                 mpath.append(item)
-            #
-            #
-            # for item in mpways:
-            #
-            #     if item in mpath:
-            #         continue
-            #     elif  map[item[0]][item[1]].getvalue()==0:
-            #         continue
-            #     elif item[0] <= 78 and item[0] >= 3 and item[1] <= 78 and item[1] >= 3:
-            #         if map[item[0]][item[1]].getvalue()==1:
-            #
-            #             map[item[0]][item[1]].changevalue(0)
-            #             #map[mcur[0] + item[0] // 2][mcur[1] + item[1] // 2].changevalue(0)
-            #             mpath.append(item)
-            #             mway.append(item)
-            #             continue
-            #
-            #
-            # if len(mpath) == 0:
-            #
-            #     mpath.append(mway.pop())
-            #
-            #     mpath.append(mway.pop())
-            #
-            #
-            #
-            #
-            #
-            #
-            #
-            #
-            #
-            #
-            # # for item in mpways:
-            # #     if cnt==4:
-            # #         cnt=0
-            # #     else:cnt+=1
-            # #     if item in mpath:
-            # #         continue
-            # #
-            # #     elif map[item[0]][item[1]].getvalue()==0:
-            # #         continue
-            # #     elif item[0]<=78 and  item[0]>=3 and  item[1]<=78 and item[1]>=3:
-            # #         if map[item[0] + 1][item[1]] in mpath or map[item[0]][item[1] + 1] in mpath or map[item[0]][item[1] - 1] in mpath or map[item[0] - 1][item[1]] in mpath:
-            # #             continue
-            # #         elif map[item[0]][item[1]].getvalue() == 1:
-            # #             mpath.append(item)
-            # #             if cnt==1:
-            # #                 map[item[0]][item[1]].changevalue(0)
-            # #             continue
-            #
-            #
-            #
-            #
-
-
+    
 
         if keypressed[pygame.K_SPACE]:
             x, y = getapos()
@@ -504,21 +369,7 @@ def main():
                     yd=yshort()
                     for item in yd:
                         map[item[0]][item[1]].changevalue(4)
-                    ypathd=ypath()
-                    #for item in ypathd:
-                    #    map[item[0]][item[1]].changevalue(3)
-
-                    #for item in yd:
-                      #  map[item[0]][item[1]].changevalue(2)
-
-
-
-
-                    #spath=short(shortpath)
-                    # for item in spath:
-                    #     map[item[0]][item[1]].changevalue(4)
-
-
+                    ypathd=ypath(
 
                 else:
                     if item not in path:
