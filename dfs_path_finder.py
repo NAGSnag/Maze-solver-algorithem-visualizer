@@ -369,7 +369,7 @@ def main():
                     yd=yshort()
                     for item in yd:
                         map[item[0]][item[1]].changevalue(4)
-                    ypathd=ypath(
+                    ypathd=ypath
 
                 else:
                     if item not in path:
